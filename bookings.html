@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head><title>My Bookings</title></head>
+<body>
+    <h2>Your Bookings</h2>
+    <ul>
+    {% for booking in bookings %}
+        <li>{{ booking[7] }} booked {{ booking[5] }} seat(s) on {{ booking[1] }} to {{ booking[2] }} (₹{{ booking[6] }} per seat)</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

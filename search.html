@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><title>Available Buses</title></head>
+<body>
+<h2>Available Buses</h2>
+{% if buses %}
+    <ul>
+        {% for bus in buses %}
+            <li>
+                {{ bus[1] }} to {{ bus[2] }} — {{ bus[3] }} at {{ bus[4] }} — ₹{{ bus[6] }} — 
+                Seats: {{ bus[5] }} — 
+                <a href="/book/{{ bus[0] }}">Book</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No buses found for the selected route.</p>
+{% endif %}
+
+</body>
+</html>

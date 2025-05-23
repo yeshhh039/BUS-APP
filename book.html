@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Book Ticket</title></head>
+<body>
+    <h2>Book Ticket for {{ bus[1] }} to {{ bus[2] }}</h2>
+    <form method="post">
+        Name: <input name="name"><br>
+        Email: <input name="email"><br>
+        Seats: <input name="seats" type="number" min="1" max="{{ bus[5] }}"><br>
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>
